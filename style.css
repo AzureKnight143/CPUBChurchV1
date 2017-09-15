@@ -1,0 +1,761 @@
+/*
+Theme Name:     College Park Church
+Author:         Matt Wright
+Description:    This theme is a child theme of Twenty Eleven, so don't delete Twenty Eleven or this theme! If Twenty Eleven has been updated, it may effect how this theme behaves so update with caution.
+Template:       twentyeleven
+Version:        1.0
+*/
+
+@import url("../twentyeleven/style.css");
+
+/* -----------------------------
+Site Wide ----------------------
+------------------------------*/
+h1, h2, h3, h4, h5, h6  {
+	font-family: 'Questrial', Verdana, Geneva, sans-serif;
+	color: #4c4c4c;
+}
+a {
+	color: #a4c400;
+}
+body, input, textarea {
+	font: 0.875em Verdana, Geneva, sans-serif; /* 14 / 16 */
+}
+img, embed, object, video {
+	max-width: 100%;
+}
+.questrial {
+	font-family: 'Questrial', Verdana, Geneva, sans-serif;
+}
+.blue {
+	color: #42a1d1;
+}
+.yellow {
+	color: #fdd900;
+}
+.green {
+	color: #a4c400;
+}
+.clear-both {
+	clear: both;
+}
+.small-icon {
+	width: 16px;
+}
+body:-moz-last-node {
+	margin:-28px 0 0 0; /* firefox */
+}
+/* -----------------------------
+Layout -------------------------
+------------------------------*/
+body {
+	padding: 0;
+	background-color: #bad0db;
+}
+#page {
+	max-width: 100% !important;
+	margin: 0 auto;
+	background-color: transparent;
+}
+#main {
+	background-color: #fff;
+	margin: 2em auto 1em auto;
+	padding: 2em 3.125%; /* 30 / 960 */
+}
+.wrapper {
+	width: 960px;
+	margin: 0 auto;
+}
+#content, .singular #content {
+	width: 100%;
+	margin: 0;
+}
+/* -----------------------------
+Header -------------------------
+------------------------------*/
+#branding {
+	border-top: 0;
+	background-color: #fff;
+	padding: 0;
+}
+#branding img {
+	margin-bottom: 0;
+}
+#header {
+	position: relative;
+}
+#logo {
+	width: 33.85417%; /* 325 / 960 */
+	margin: 0.25em 0 0;
+	float: left;
+}
+#header-links {
+	font-family: 'Questrial', Verdana, Geneva, sans-serif;
+	font-size: 2.125em;
+	margin: 0.825em 0 0 0;
+	width: 66.14583%;
+	display: inline-block;
+	text-align: right;
+	float: right;
+}
+#header-links>:first-child {
+	margin: 0;
+}
+#header-links a {
+	margin: 0 0 0 6.25%; /* 60 / 960 */
+}
+/* -----------------------------
+Main Navigation ----------------
+------------------------------*/
+#access {
+	width: auto;
+	margin: 0 auto 0;
+	float: right;
+	clear: none;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 0px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 0px; 
+}
+#access div {
+	margin: 0;
+}
+#access ul {
+	margin: 0;
+	font-size: 0.857142em; /* 12 / 14 */
+}
+#access ul ul {
+	top: 3.84em;
+}
+#access ul ul a {
+	font-size: 1.2em; /* 12 / 10 */
+}
+#access .current-menu-item > a, #access .current-menu-ancestor > a, #access .current_page_item > a, #access .current_page_ancestor > a {
+	font-weight: 400;
+}
+/* -----------------------------
+Mobile Navigation --------------
+------------------------------*/
+#access-mobile {
+	width: 100%;
+	display: none;
+	background: #000;
+	padding: 0.5em 0;
+	margin-top: 0.5em;
+}
+#access-mobile  select{
+	width: 93.75%;
+	margin: 0 3.125%; /* 30 / 960 */
+	padding: 0.5em;
+	background: #F9F9F9;
+}
+/* -----------------------------
+Footer Navigation --------------
+------------------------------*/
+#access-footer {
+	display: inline-block;
+}
+#access-footer ul {
+	margin: 0;
+}
+#access-footer li:first-child {
+	list-style-type: none;
+	margin: 0;
+}
+#access-footer  li{
+	list-style-type: disc;
+	color: #444;
+	float: left;
+	margin-left: 2.25em;
+}
+#access-footer li a {
+	color: #444;
+}
+/* -----------------------------
+Footer -------------------------
+------------------------------*/
+#footer-left {
+	float: left;
+}
+#colophon {
+	margin-bottom: 2.5em;
+	color: #666;
+	font-size: 0.78571em; /* 11 / 14 */
+	line-height: 1.25em;
+}
+#connect {
+	width: 104px; /* ie8 */
+	float: right;
+}
+#connect a {
+	display: inline-block; /* ie8 */
+}
+#copyright {
+	margin-top: 0.75em;
+}
+/* -----------------------------
+Default Page Template ----------
+------------------------------*/
+.page-template-default #primary {
+	width: 100%;
+	margin: 0 3.125% 0 0; /* 30 / 960 */
+}
+/* -----------------------------
+Sidebar Page Template ----------
+------------------------------*/
+.page-template-sidebar-page-php #primary, .category #primary, .single-post #primary, .single-banner #primary, .page-template-prayer-request-php #primary, .page-template-serving-request-php #primary  {
+	width: 76.7%; /* 690 */
+}
+#secondary {
+	width: 20.833333%; /* 200 / 960 */
+	margin: 0 -7% 0 0; /* 62 /960 */
+	padding: 2.125em 3.125%; /* 30 / 960 */
+	background-color: #f9e789;
+}
+/* -----------------------------
+Sidebar ------------------------
+------------------------------*/
+.widget {
+	margin: 2.2em 0 0 0;
+}
+.widget-area>:first-child  {
+	margin: 0;
+}
+.widget-title {
+	color: #333;
+	font-size: 1.4em;
+	line-height: 1.4em;
+	margin: 0 0 0.25em 0;
+}
+.widget ul {
+	margin: 0;
+}
+.widget ul>:first-child, .ko-calendar-event-list>:first-child {
+	border-top: 2px solid #FDD900;
+}
+.widget ul li, .ko-calendar-event-list>div {
+	color: #333;
+	line-height: 24px;
+	font-size: 12px;
+	list-style: none;
+	border-bottom: 2px solid #FDD900;
+}
+.widget a {
+	font-size: 1em;
+	line-height: 1em;
+	color: #333;
+}
+.widget a:hover {
+	color: #555;
+	text-decoration: none;
+}
+.ko-calendar-event-list {
+	margin: 0 !important;
+}
+.ko-calendar-date {
+	margin-top: 0.75em !important;
+	margin-bottom: 0.75em;
+	color: #555;
+}
+/* -----------------------------
+Teasers ------------------------
+------------------------------*/
+.teasers {
+	margin: 0;
+}
+.teasers>:first-child, .teasers .first {
+	margin: 0 0 2em 0 !important;
+}
+.teasers li {
+	float: left;
+	padding: 0.5%;
+	background-color: #ddd;
+	list-style: none;
+}
+.teasers li a {
+	color: #444;
+	text-decoration: none;
+	display: block;
+}
+.teaser-title {
+	font-size: 0.78571em; /* 11 / 14 */
+	font-weight: 600;
+	text-align: center;
+	height: 3.5em;
+}
+.teaser-subtitle {
+	font-size: 0.81818em; /* 9 / 11 */
+	font-weight: 600;
+	color: #777;
+	display: block;
+}
+/* -----------------------------
+Home ---------------------------
+------------------------------*/
+.banners {
+	position: relative;
+	margin: 0 0 0.75em 0;
+	background-color: #000;
+}
+.slide {
+	position: relative;
+	margin-bottom: -0.22em;
+}
+.slide img {
+	width: 100%;
+}
+.slide a {
+	text-decoration: none;
+}
+.banners .flex-control-nav {
+	bottom: 0.125em;
+}
+.banners .flex-control-nav li a {
+	background: #fff;
+	overflow: hidden;
+	width: 10px; 
+	height: 0;
+	padding-top: 10px;
+	border: 1px solid #3b5481;
+	border-radius: 20px; 
+	-moz-border-radius: 20px; 
+	-webkit-border-radius: 20px;	
+}  
+.flex-control-nav li:hover a, .flex-control-nav li a.active { 
+	background-color: #42a1d1;
+}
+.banner-text {
+	color: #eee;
+	text-shadow: #1C1002 0 2px 2px;
+	padding: 0 2% 3% 2%;
+	position: absolute;
+	bottom: 0;
+}
+.banner-text h1 {
+	color: #eee;
+	font-size: 2.5em;
+}
+.banner-text .description {
+	font-size: 1.25em;
+}
+.teasers.home-links > :first-child, .teasers .first {
+	margin: 0 !important;
+}
+.teasers.home-links li {
+	width: 23.8%;
+	padding: 0;
+	margin: 0 0 0 1.6%;
+	background-color: #000;
+}
+.teasers.home-links .teaser-title {
+	color: #fff;
+	font-weight: 800;
+	display: block;
+	font-size: 1.125em;
+	height: auto;
+	padding: 0.25em .5em;
+	text-align: left;
+}
+/* -----------------------------
+Page ---------------------------
+------------------------------*/
+.page-title {
+	color: #4c4c4c;
+	font-size: 1.7em;
+	line-height: 1.7em;
+	margin: 0 0 1em 0;
+}
+.teasers.sub-page-list {
+	margin-top: 2em;
+}
+.teasers.sub-page-list li {
+	width: 20.8%;
+	margin: 0 0 2em 4.25%;
+}
+.page-id-11 .teasers.sub-page-list .teaser-title {
+	height: 2.5em;
+}
+/* -----------------------------
+Category -----------------------
+------------------------------*/
+.category #content>:last-child {
+	border: 0;
+	padding: 0;
+}
+.category .post {
+	border-bottom: 1px solid #ccc;
+	margin: 1.625em 0 0 0;
+}
+.category-archive-meta {
+	overflow: hidden;
+}
+.category-archive-meta p:last-child a {
+	float: right;
+	margin-top: -70px;
+}
+/* -----------------------------
+Entry --------------------------
+------------------------------*/
+.entry-title, .entry-title a , .singular .entry-title {
+	font-size: 1.28571em; /* 18 / 14 */
+	color: #4c4c4c;
+	line-height: 20px;
+	padding: 0 0 0.625em 0;
+}
+.entry-title a {
+	font-size: 1em;
+}
+.entry-title a:hover {
+	color: #42a1d1;
+}
+.entry-header .entry-meta {
+	padding: 0 0 0.5em 0;
+}
+.entry-content, .entry-summary {
+	padding: 0;
+}
+.entry-content .featured-image {
+	width: 21.73913%; /* 175 / 690 */
+	height: auto;
+	padding: 0 3.62319% 0.5em 0; /* 25 / 690 */
+	float: left;
+}
+.entry-content h2 {
+	display: inline-block;
+	margin-bottom: 1.625em;
+}
+.entry-content li {
+	padding: 0.5em 0;
+}
+footer.entry-meta {
+	display: none;
+}
+/* -----------------------------
+Singular Entry -----------------
+------------------------------*/
+.singular .entry-header, .singular .entry-content, .singular footer.entry-meta, .singular #comments-title {
+	width: 100%;
+}
+.singular .entry-header .entry-meta {
+	position: static;
+}
+.singular .hentry {
+	padding: 0;
+}
+.hentry, .no-results, .singular.page .hentry {
+	border-bottom: 0;
+	padding: 0;
+	margin: 0;
+}
+/* -----------------------------
+Banner Entry -------------------
+------------------------------*/
+.single-banner #nav-single {
+	display: none;
+}
+/* -----------------------------
+Entry Extras -------------------
+------------------------------*/
+img[class*="align"], img[class*="wp-image-"], #content .gallery .gallery-icon img {
+	border: 0 !important;
+	padding: 0 !important;
+}
+.mejs-audio {
+	margin: 1em 0;
+}
+#mobile-calendar {
+	display: none;
+}
+/* -----------------------------
+Page Nav -----------------------
+------------------------------*/
+#content nav {
+	padding: 0 0 0.625em;
+}
+#nav-single {
+	width: 100%;
+	padding: 0 0 0.625em 0;
+}
+#nav-single .back-link {
+	color: #666;
+	font-size: 0.85714em; /* 12 / 14 */
+	line-height: 1.28571em; /* 18 / 14 */
+	float: left;
+}
+/* -----------------------------
+Contact Page -------------------
+------------------------------*/
+#contact-text {
+	float: left;
+	width: 37.5%;
+	margin-right: 4.5%;
+}
+#contact-map {
+	float: right;
+	width: 58%;
+}
+#contact-map a {
+	float: right;
+}
+/* -----------------------------
+Forms --------------------------
+------------------------------*/
+label {
+	font-weight: 900;
+	float: left;
+	padding-bottom: 0.5em;
+}
+label.error {
+	color: #930419;
+	float: right;
+}
+input[type=text], textarea {
+	width: 95.8%;
+}
+select {
+	width: 100%;
+}
+input[type=text], textarea, select{
+	margin-bottom: 1em;
+	padding: 1em 2%;
+}
+.button, .category-archive-meta p:last-child a {
+	background: #42a1d1;
+	border: none;
+	color: #eee;
+	padding: 1em 1.5em;
+	font-weight: 900;
+	display: inline-block;
+}
+.button:hover, .category-archive-meta p:last-child a:hover {
+	background: #3580a5;
+	text-decoration: none;
+}
+.form-message {
+	background: #dff0d8;
+	color: #468847;
+	padding: 0.8em 2%;
+	border: 1px solid #d6e9c6;
+	margin-bottom: 1em;
+}
+/* -----------------------------
+@media 1023px Tablet -----------
+------------------------------*/
+@media only screen and (max-width: 1024px) {
+	.wrapper {
+		width: 93.75%;
+	}
+}
+/* -----------------------------
+@media 900px Tablet ------------
+------------------------------*/
+@media only screen and (max-width: 900px) {
+	#access {
+		width: 100%;
+		position: static;
+	}
+	#header-links {
+		width: 66.14583%;
+		margin: 1.5em 0 0 0;
+	}
+	#contact-text {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+	#contact-map {
+		float: none;
+		width: 100%;
+	}
+	.teaser-title {
+		height: 3.75em;
+	}
+}
+/* -----------------------------
+@media 800px Tablet ------------
+------------------------------*/
+@media only screen and (max-width: 800px) {
+	#main #secondary {
+		width: 20.833333%; /* 200 / 960 */
+		margin: 0 -7% 0 0;
+		float: right;
+	}
+	#main #content {
+		margin: 0;
+	}
+}
+/* -----------------------------
+@media 767px Tablet ------------
+------------------------------*/
+@media only screen and (max-width: 767px), (orientation: landscape) and (max-device-height: 767px), (orientation: portrait) {
+	.wrapper {
+		width: 100%;
+	}
+	.page-template-sidebar-page-php #primary, .category #primary, .single-post #primary, .page-template-prayer-request-php #primary, .page-template-serving-request-php #primary  {
+		width: 73.05555%;
+	}
+	#main #secondary {
+		margin: 0 -3.33% 0 0;
+	}	
+	#logo {
+		margin-left: 1%;
+	}
+	#header-links {
+		width: 64.14583%;
+		margin-right: 1%;
+	}
+	#colophon {
+		width: 98%;
+		padding: 0 1%;
+	}
+	#copyright {
+		margin-top: 0;
+	}
+	.teaser-title {
+		font-size: 0.714286em; /* 10 / 14 */
+	}
+	.teasers.home-links .teaser-title {
+		font-size: 1em;
+	}
+	#mobile-calendar {
+		display: block;
+	}
+	#main-calendar {
+		display: none;
+	}
+}
+/* -----------------------------
+@media 720px Tablet ------------
+------------------------------*/
+@media only screen and (max-width: 720px) {
+	#access-footer {
+		display: none;
+	}
+}
+/* -----------------------------
+@media 660px Tablet ------------
+------------------------------*/
+@media only screen and (max-width: 660px) {
+	#header-links {
+		margin-top: 0.75em;
+	}
+	#header-links a {
+		font-size: 0.857142em; /* 24 / 28 */
+	}
+	.alignleft {
+		float: left;
+	}
+	.alignright {
+		float: right;
+	}
+	#main {
+		padding: 1.5em 3.125%;
+	}
+	.banner-text {
+		padding-bottom: 4%;
+	}
+	.banner-text h1 {
+		font-size: 1.75em;
+	}
+	.banner-text .description {
+		font-size: 1em;
+	}
+	.teasers.home-links .teaser-title {
+		font-size: 0.8em;
+	}
+}
+/* -----------------------------
+@media 625px Tablet ------------
+------------------------------*/
+@media only screen and (max-width: 625px) {
+	#wp-admin-bar-top-secondary {
+		display: none;
+	}
+}
+/* -----------------------------
+@media 560px Phone -------------
+------------------------------*/
+@media only screen and (max-width: 560px) {
+	body:-moz-last-node {
+		margin:0; /* firefox */
+	}		
+	#secondary, #access, #wp-admin-bar-top-secondary {
+		display: none;
+	}
+	.page-template-sidebar-page-php #primary, .category #primary, .single-post #primary, .page-template-prayer-request-php #primary, .page-template-serving-request-php #primary  {
+		width: 100%;
+	}
+	#access-mobile {
+		display: inline-block;
+	}
+	#logo {
+		width: 93.75%;
+		margin: 0.25em 3.125% 0 3.125%; /* 30 / 960 */
+		text-align: center;
+	}
+	#logo img {
+		max-width: 225px;
+	}
+	#header-links {
+		width: 100%;
+		margin: 0;
+		text-align: center;
+	}
+	#main {
+		padding: 1.25em 3.125%;
+		margin: 1em auto .5em auto;
+	}
+	.banners {
+		margin: 0 0 0.5em 0;
+	}
+	.teasers.home-links .teaser-title {
+		
+	}
+	#colophon {
+		width: 93.75%;
+		padding: 0 3.125%;
+		margin-bottom: 1em;
+	}
+	#copyright {
+		width: 100%;
+	}
+}
+/* -----------------------------
+@media 480px Phone -------------
+------------------------------*/
+@media only screen and (max-width: 480px) {
+	#main {
+		padding: 1em 3.125%;
+	}
+	.banner-text {
+		padding-bottom: 7%;
+	}
+	.banner-text h1 {
+		font-size: 1.25em;
+	}
+	.banner-text .description {
+		font-size: 0.8em;
+	}
+	.teasers.home-links li.teaser3 {
+		margin-left: 0;
+	}
+	.teasers.home-links li.teaser3, .teasers.home-links li.teaser4 {
+		margin-top: 0.5em;
+	}
+	.teasers.home-links li {
+		width: 48.8%;
+		margin-left: 2.4%;
+	}
+	.teasers.home-links .teaser-title {
+		font-size: 1em;
+	}
+	.teasers.sub-page-list li {
+		width: 27.5%;
+		margin: 0 2% 2em 2% !important;
+	}
+	#footer-left {
+		width: 50%;
+	}
+}
